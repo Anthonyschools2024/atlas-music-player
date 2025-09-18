@@ -16,14 +16,14 @@ function Playlist() {
   const [selectedSongId, setSelectedSongId] = useState(2);
 
   return (
-    <div className="flex flex-col gap-y-2 rounded-lg bg-neutral-900 p-4">
-      <h3 className="px-2 pb-2 text-lg font-bold text-white">Playlist</h3>
+    <div className="flex flex-col gap-y-2 rounded-xl bg-surface p-4 shadow-lg">
+      <h3 className="px-2 pb-2 text-lg font-bold text-text-primary">Playlist</h3>
       {songs.map((song) => (
         <div
           key={song.id}
           // Apply a background color if the song is selected
-          className={`rounded-lg ${
-            selectedSongId === song.id ? 'bg-neutral-800' : 'bg-transparent'
+          className={`rounded-xl transition-colors duration-200 ${
+            selectedSongId === song.id ? 'bg-primary/20' : 'bg-transparent'
           }`}
           // Update the selected song ID on click
           onClick={() => setSelectedSongId(song.id)}
