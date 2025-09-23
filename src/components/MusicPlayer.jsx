@@ -3,8 +3,8 @@ import Playlist from './Playlist';
 
 function MusicPlayer() {
   return (
-    <div className="min-h-screen bg-background p-4 text-text-primary md:p-8 border-2 border-accent rounded-2xl">
-      <div className="flex flex-col gap-6 md:flex-row">
+    <div className="min-h-screen bg-background p-4 font-sans text-text-primary md:p-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row">
         {/* Left Column: Currently Playing */}
         <div className="w-full md:w-2/5">
           <CurrentlyPlaying />

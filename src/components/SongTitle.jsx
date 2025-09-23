@@ -1,4 +1,4 @@
-function SongTitle({ title, artist }) {
+function SongTitle({ title = 'Song Title', artist = 'Artist Name' }) {
   return (
     <div className="flex flex-col items-center text-center">
       <h2 className="text-xl font-bold text-text-primary">{title}</h2>
@@ -6,11 +6,5 @@ function SongTitle({ title, artist }) {
     </div>
   );
 }
-
-// Adding default props for easy demonstration
-SongTitle.defaultProps = {
-  title: 'Song Title',
-  artist: 'Artist Name',
-};
 
 export default SongTitle;

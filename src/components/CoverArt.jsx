@@ -7,7 +7,6 @@ function CoverArt() {
         src={coverArt}
         alt="Album cover art"
         className="aspect-square w-full rounded-xl object-cover"
-      // Note: The original file name was custom-style.jpg
       />
     </div>
   );

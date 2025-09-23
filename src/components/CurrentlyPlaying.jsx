@@ -7,7 +7,7 @@ function CurrentlyPlaying() {
   return (
     <div className="flex flex-col gap-y-6 rounded-xl bg-surface p-6 shadow-lg">
       <CoverArt />
-      <SongTitle title="Come Together" artist="The Beatles" />
+      <SongTitle title="Painted in Blue" artist="Soul Canvas" />
       <PlayControls />
       <VolumeControls />
     </div>

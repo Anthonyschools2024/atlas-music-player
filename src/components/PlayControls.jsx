@@ -1,29 +1,38 @@
-import { Shuffle, SkipBack, Play, SkipForward, Gauge } from 'lucide-react';
+import { useState } from 'react';
+import { Shuffle, SkipBack, Play, Pause, SkipForward, Gauge } from 'lucide-react';
 
 function PlayControls() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className="flex items-center justify-center gap-x-6">
-      {/* Speed Button */}
       <button className="text-text-secondary transition-colors duration-200 hover:text-text-primary">
         <Gauge size={20} />
       </button>
 
-      {/* Back Button */}
       <button className="text-text-secondary transition-colors duration-200 hover:text-text-primary">
         <SkipBack size={24} fill="currentColor" />
       </button>
 
-      {/* Play Button */}
-      <button className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-text-primary transition hover:scale-105">
-        <Play size={28} fill="currentColor" className="ml-1" />
+      <button
+        onClick={handlePlayPause}
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-background transition hover:scale-105"
+      >
+        {isPlaying ? (
+          <Pause size={28} fill="currentColor" />
+        ) : (
+          <Play size={28} fill="currentColor" className="ml-1" />
+        )}
       </button>
 
-      {/* Forward Button */}
       <button className="text-text-secondary transition-colors duration-200 hover:text-text-primary">
         <SkipForward size={24} fill="currentColor" />
       </button>
 
-      {/* Shuffle Button */}
       <button className="text-text-secondary transition-colors duration-200 hover:text-text-primary">
         <Shuffle size={20} />
       </button>
