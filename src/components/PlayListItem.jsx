@@ -1,4 +1,4 @@
-function PlayListItem({ title = 'Song Title', artist = 'Artist Name', duration = '3:45' }) {
+function PlayListItem({ title, artist, duration }) {
   return (
     <div className="flex w-full items-center justify-between p-3 text-left">
       <div className="flex flex-col">
@@ -9,5 +9,4 @@ function PlayListItem({ title = 'Song Title', artist = 'Artist Name', duration =
     </div>
   );
 }
-
 export default PlayListItem;

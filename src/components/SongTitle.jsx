@@ -6,5 +6,4 @@ function SongTitle({ title = 'Song Title', artist = 'Artist Name' }) {
     </div>
   );
 }
-
 export default SongTitle;

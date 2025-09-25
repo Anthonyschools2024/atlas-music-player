@@ -4,7 +4,7 @@ import useDarkMode from './hooks/useDarkMode';
 import './index.css';
 
 function App() {
-  // Initialize the hook here to set the theme on initial page load
+  // This initializes the dark mode functionality
   useDarkMode();
 
   return (
