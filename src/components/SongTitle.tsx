@@ -1,4 +1,9 @@
-function SongTitle({ title = 'Song Title', artist = 'Artist Name' }) {
+interface SongTitleProps {
+  title: string;
+  artist: string;
+}
+
+function SongTitle({ title, artist }: SongTitleProps) {
   return (
     <div className="flex flex-col items-center text-center">
       <h2 className="text-xl font-bold text-text-primary">{title}</h2>
@@ -6,4 +11,5 @@ function SongTitle({ title = 'Song Title', artist = 'Artist Name' }) {
     </div>
   );
 }
+
 export default SongTitle;

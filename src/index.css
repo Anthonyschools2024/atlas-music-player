@@ -1,14 +1,12 @@
-/* Define Tailwind's base, components, and utilities */
+/* The @import for the font MUST come first */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* The @tailwind directives must come after any @import statements */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Define the font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
-/* Define the color variables for the entire application.
-  This is the new, robust theming strategy.
-*/
+/* Define the color variables for the entire application */
 @layer base {
   :root {
     /* Light Mode Colors */
