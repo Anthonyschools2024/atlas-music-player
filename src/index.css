@@ -1,5 +1,30 @@
+/* Define Tailwind's base, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Define the font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Define the color variables for the entire application.
+  This is the new, robust theming strategy.
+*/
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --color-background: 249 250 251; /* #F9FAFB */
+    --color-surface: 255 255 255;    /* #FFFFFF */
+    --color-primary: 37 99 235;      /* #2563EB */
+    --color-text-primary: 17 24 39;     /* #111827 */
+    --color-text-secondary: 107 114 128; /* #6B7280 */
+  }
+
+  .dark {
+    /* Dark Mode Colors (Your Custom Theme) */
+    --color-background: 10 25 47;      /* #0A192F */
+    --color-surface: 23 42 69;       /* #172A45 */
+    --color-primary: 136 216 248;    /* #88D8F8 */
+    --color-text-primary: 230 241 255;   /* #E6F1FF */
+    --color-text-secondary: 136 146 176; /* #8892B0 */
+  }
+}
